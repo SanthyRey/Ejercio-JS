@@ -1,0 +1,154 @@
+/* 1. Configuración General y Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Un degradado azulado más suave y moderno */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para agrupar todo (Opcional, pero recomendado si quieres centrar tu app) */
+#app-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* 2. Estilo del Formulario y Caja de Búsqueda */
+form, #buscar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Despacio uniforme entre elementos */
+}
+
+/* Estilo para los inputs de texto */
+input[type="text"], input[type="tel"], #buscar {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccd1d9;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, #buscar:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Contenedor del checkbox para que se alinee bonito */
+form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 3. Botones Modernos */
+button, #btnFavoritos {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+button:hover, #btnFavoritos:hover {
+  background-color: #357abd;
+}
+
+button:active, #btnFavoritos:active {
+  transform: scale(0.98);
+}
+
+/* Botón de favoritos con un color que resalte diferente */
+#btnFavoritos {
+  background-color: #5c6bc0;
+  margin-bottom: 20px;
+}
+
+#btnFavoritos:hover {
+  background-color: #3f51b5;
+}
+
+/* 4. Lista de Contactos (Tarjetas) */
+#listaContactos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacto {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+  border-left: 5px solid #ccd1d9; /* Borde sutil a la izquierda */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contacto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contacto h3 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacto p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* 5. El toque para los Favoritos */
+/* Si el contacto es favorito, cambiamos el color de su borde izquierdo */
+.contacto:has(.favorito) {
+  border-left-color: #ffb300; 
+}
+
+.favorito {
+  color: #ffb300; /* Estrellita dorada/amarilla en lugar de azul eléctrico */
+  font-size: 18px;
+}
+
+/* 6. Caja de Estadísticas */
+#estadisticas {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px); /* Efecto borroso moderno de fondo */
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  width: 100%;
+}

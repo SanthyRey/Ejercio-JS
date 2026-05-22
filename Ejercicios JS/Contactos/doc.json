@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Camila",
+    "telefono": "315892",
+    "favorito": false
+  },
+  {
+    "nombre": "Mateo",
+    "telefono": "310431",
+    "favorito": true
+  },
+  {
+    "nombre": "Valentina",
+    "telefono": "321654",
+    "favorito": true
+  }
+]

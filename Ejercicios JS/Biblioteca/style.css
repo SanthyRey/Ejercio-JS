@@ -1,0 +1,139 @@
+/* 1. Configuración de pantalla y colores generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d1117; /* Fondo oscuro tipo GitHub */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 40px 20px;
+  color: #c9d1d9; /* Texto claro que no cansa la vista */
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #f0f6fc;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 2. Botón principal (Filtro) */
+button {
+  background: #238636; /* Verde moderno para contrastar con el fondo oscuro */
+  color: #ffffff;
+  border: 1px solid rgba(240, 246, 24fc, 0.1);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  background: #2ea043;
+  box-shadow: 0 0 12px rgba(46, 160, 67, 0.4);
+}
+
+/* 3. Panel de Inventario / Estadísticas */
+#estadisticas {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#estadisticas h3 {
+  color: #58a6ff; /* Título celeste */
+  font-size: 18px;
+}
+
+#estadisticas p {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+/* 4. Grilla de Tarjetas */
+#listaLibros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* 5. Estilo de cada tarjeta de Libro */
+.libro {
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.libro:hover {
+  transform: translateY(-4px);
+  border-color: #8b949e;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.libro h3 {
+  color: #f0f6fc;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.libro p {
+  color: #8b949e;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Estados dinámicos (Disponibilidad) */
+.disponible {
+  color: #58a6ff !important; /* Celeste Neón */
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prestado {
+  color: #f85149 !important; /* Rojo Coral */
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Botón interno de la tarjeta */
+.libro button {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 0;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+}
+
+.libro button:hover {
+  background: #30363d;
+  color: #f0f6fc;
+  box-shadow: none; /* Quitamos el brillo verde en los botones de las tarjetas */
+}

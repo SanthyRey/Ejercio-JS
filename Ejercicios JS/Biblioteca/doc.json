@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Crónica de un asesino de reyes",
+    "autor": "Patrick Rothfuss",
+    "prestado": true
+  },
+  {
+    "titulo": "La ciudad y los perros",
+    "autor": "Mario Vargas Llosa",
+    "prestado": false
+  },
+  {
+    "titulo": "El código Da Vinci",
+    "autor": "Dan Brown",
+    "prestado": true
+  }
+]
